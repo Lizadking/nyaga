@@ -41,7 +41,7 @@ void readFile(std::shared_ptr<std::vector<manga>> initialvector, std::string fil
     */
 }
 
-void readTitles(std::shared_ptr<std::vector<manga>> initialvector, std::string filename)
+void readTitles(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector, std::string filename)
 {
 
      //file io
@@ -55,6 +55,16 @@ void readTitles(std::shared_ptr<std::vector<manga>> initialvector, std::string f
         std::cout<<"The file cannot be read..."<<std::endl;
         myFile.close();
     }
+    else
+    {
+        while(getline(myFile,line))
+        {
+            std::shared_ptr<manga> temp = std::make_unique<manga>(line);
+            initialvector->push_back(temp);
+           //std::cout<<temp<<std::endl;
+        }
+    }
+    
 
 }
 
