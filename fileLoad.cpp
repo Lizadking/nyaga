@@ -6,7 +6,7 @@
 #include <memory>
 #include "manga.h"
 
-std::shared_ptr<manga> readFile(std::string filename)
+void readFile(std::shared_ptr<std::vector<manga>> initialvector, std::string filename)
 {
     /*
     std::cout<<"Loading file..."<<std::endl;
@@ -40,7 +40,23 @@ std::shared_ptr<manga> readFile(std::string filename)
     return titleList;
     */
 }
-std::shared_ptr<manga> readTitles(std::string filename);
+
+void readTitles(std::shared_ptr<std::vector<manga>> initialvector, std::string filename)
+{
+
+     //file io
+    std::ifstream myFile;
+    myFile.open(filename);
+    std::string line;
+    int lineCount = 0;
+
+    if(myFile.fail())
+    {
+        std::cout<<"The file cannot be read..."<<std::endl;
+        myFile.close();
+    }
+
+}
 
 void displayTitleList(const std::vector<std::string> *title)
 {
