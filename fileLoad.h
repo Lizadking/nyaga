@@ -17,6 +17,7 @@ void readFile(std::shared_ptr<std::vector<std::unique_ptr<manga>>> initialvector
 //Expected return value: populate the initial vector
 void readTitles(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector, std::string filename);
 void displayTitleList(const std::vector<std::string> *title);
+void iterateMangaList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector);
 
 
 #endif

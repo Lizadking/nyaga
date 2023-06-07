@@ -61,7 +61,6 @@ void readTitles(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvect
         {
             std::shared_ptr<manga> temp = std::make_unique<manga>(line);
             initialvector->push_back(temp);
-           //std::cout<<temp<<std::endl;
         }
     }
     
@@ -80,4 +79,13 @@ void displayTitleList(const std::vector<std::string> *title)
     auto duration = duration_cast<milliseconds>(stop - start);
     std::cout <<"displayTitleList time:"<<duration.count() << std::endl; // get the duration of the clock in seconds
     */
+}
+
+void iterateMangaList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector)
+{
+     
+    for(std::vector<std::shared_ptr<manga>>::iterator it = initialvector->begin(); it != initialvector->end();++it)
+    {
+        std::cout<<**it<<std::endl;
+    }
 }
