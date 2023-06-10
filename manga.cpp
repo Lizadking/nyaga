@@ -21,4 +21,7 @@ void manga::setCompleteStatus(bool stat){completed = stat;}
 int manga::getCurrChapter(){return currentChapter;}
 void manga::setCurrChapter(int chapter){currentChapter = chapter;}
 
+std::string manga::getMagazine(){return magazine;}
+void manga::setMagazine(std::string mag){magazine = mag;}
+
 

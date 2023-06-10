@@ -18,6 +18,7 @@ void readFile(std::shared_ptr<std::vector<std::unique_ptr<manga>>> initialvector
 void readTitles(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector, std::string filename);
 void displayTitleList(const std::vector<std::string> *title);
 void iterateMangaList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector);
+std::shared_ptr<manga> createMangaFromCSV(std::string magazine,std::string name, std::string completeStatus,std::string currentChapter);
 
 
 #endif

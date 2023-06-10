@@ -27,13 +27,16 @@ class manga
         int getCurrChapter();
         void setCurrChapter(int chapter);
 
+        std::string getMagazine();
+        void setMagazine(std::string magazine);
+
 
         friend std::ostream& operator<<(std::ostream& os, const manga& i)
         {
 
             std::cout<< i.title <<",\n"<<
             i.completed<<",\n"<<
-            i.currentChapter<<",\n"<<std::endl;
+            i.currentChapter<<std::endl;
             return os;
         }
 	    friend bool operator<(const manga& n1, const manga& n2)
@@ -67,7 +70,7 @@ class manga
     
 
     private:
-        std::string title;
+        std::string title,magazine;
         bool completed;
         bool dropped;
         int currentChapter;

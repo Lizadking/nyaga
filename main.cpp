@@ -6,8 +6,8 @@ int main()
     //Driver test: Make the program sort the objects by alphabetical order 
 
     //load in titles from file, create a vector of manga pointers to store there mem addresess 
-    readTitles(mangaList,"titlesList.txt"); 
-     
+    readTitles(mangaList,"mangadb.csv"); 
+   // for(auto it = std::begin (mangaList); )
     //sort alphabetical function
 
     //initalise BST (use the vecotor pointer )
