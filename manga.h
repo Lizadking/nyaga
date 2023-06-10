@@ -34,9 +34,9 @@ class manga
         friend std::ostream& operator<<(std::ostream& os, const manga& i)
         {
 
-            std::cout<< i.title <<",\n"<<
-            i.completed<<",\n"<<
-            i.currentChapter<<std::endl;
+            std::cout<< "NAME: "<< i.title <<"\n"
+                      <<"COMPLETED STATUS: "<< i.completed<<"\n"
+                      <<"CURRENT CHAPTER:"<< i.currentChapter<<std::endl;
             return os;
         }
 	    friend bool operator<(const manga& n1, const manga& n2)

@@ -90,24 +90,18 @@ std::shared_ptr<manga> createMangaFromCSV(std::string magazine,std::string name,
      temp->setTile(name);
      temp->setMagazine(magazine);
      temp->setCompleteStatus(convertedCompleteStatus);
-     temp->setCurrChapter(0);
+     temp->setCurrChapter(convertedCurrentChapter);
 
      //std::cout<<*temp<<std::endl;
      return temp;
      
 }
-void displayTitleList(const std::vector<std::string> *title)
+void displayTitleList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> list)
 {
-    /*
-    auto start = high_resolution_clock::now(); //start the clock
-    for(unsigned int i = 0; i < title->size();i++)
+  for (std::vector<std::shared_ptr<manga>>::iterator it = list->begin();it != list->end();++it)
     {
-        std::cout<<title->at(i)<<std::endl;
+        std::cout<<**it<<std::endl;
     }
-    auto stop = high_resolution_clock::now(); // end the clock
-    auto duration = duration_cast<milliseconds>(stop - start);
-    std::cout <<"displayTitleList time:"<<duration.count() << std::endl; // get the duration of the clock in seconds
-    */
 }
 
 void iterateMangaList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector)

@@ -16,7 +16,7 @@ void readFile(std::shared_ptr<std::vector<std::unique_ptr<manga>>> initialvector
 //Behavior: TESTING FUNCTION ONLY, read in titles, should create empty objects
 //Expected return value: populate the initial vector
 void readTitles(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector, std::string filename);
-void displayTitleList(const std::vector<std::string> *title);
+void displayTitleList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> list);
 void iterateMangaList(std::shared_ptr<std::vector<std::shared_ptr<manga>>> initialvector);
 std::shared_ptr<manga> createMangaFromCSV(std::string magazine,std::string name, std::string completeStatus,std::string currentChapter);
 
